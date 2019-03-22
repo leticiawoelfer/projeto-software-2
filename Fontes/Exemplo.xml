@@ -1,0 +1,21 @@
+<furbot>
+	<enunciado>
+	Faça o robô andar até a posição (7,4). &lt;br&gt;
+	Lembre-se de que as coordenadas sempre serão fornecidas como (x, y).&lt;br&gt;
+	A primeira coluna e linhas são a de número ZERO. 
+	</enunciado>
+	
+	<mundo>
+		<qtdadeLin>8</qtdadeLin>
+		<qtdadeCol>8</qtdadeCol>
+		<explodir>true</explodir>
+	</mundo>
+	
+	<robo>
+		<x>2</x>
+		<y>4</y>
+	</robo>
+	
+	
+	
+</furbot>
