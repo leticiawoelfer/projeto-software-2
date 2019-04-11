@@ -1,0 +1,184 @@
+<furbot>
+  <enunciado> Questao 1:  
+</enunciado> 
+- <mundo>
+  <qtdadeLin>10</qtdadeLin> 
+  <qtdadeCol>10</qtdadeCol> 
+  </mundo>
+- <robo>
+  <x>0</x> 
+  <y>0</y> 
+  </robo>
+- <numero>
+  <x>2</x> 
+  <y>0</y> 
+  <valor>16</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>5</x> 
+  <y>0</y> 
+  <valor>2</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>7</x> 
+  <y>0</y> 
+  <valor>17</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>4</x> 
+  <y>2</y> 
+  <valor>5</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>9</x> 
+  <y>2</y> 
+  <valor>1</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>0</x> 
+  <y>3</y> 
+  <valor>12</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>5</x> 
+  <y>3</y> 
+  <valor>2</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>6</x> 
+  <y>4</y> 
+  <valor>20</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>9</x> 
+  <y>4</y> 
+  <valor>14</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>5</x> 
+  <y>5</y> 
+  <valor>7</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>8</x> 
+  <y>6</y> 
+  <valor>9</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>3</x> 
+  <y>7</y> 
+  <valor>19</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>4</x> 
+  <y>7</y> 
+  <valor>13</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>7</x> 
+  <y>7</y> 
+  <valor>20</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero>
+  <x>8</x> 
+  <y>7</y> 
+  <valor>6</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>9</x> 
+  <y>0</y> 
+  <valor>88</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>0</x> 
+  <y>4</y> 
+  <valor>44</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>2</x> 
+  <y>4</y> 
+  <valor>93</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>4</x> 
+  <y>4</y> 
+  <valor>94</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>7</x> 
+  <y>4</y> 
+  <valor>21</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>8</x> 
+  <y>5</y> 
+  <valor>86</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <numero class="br.furb.furbot.Tesouro">
+  <x>9</x> 
+  <y>8</y> 
+  <valor>25</valor> 
+  <bloqueado>false</bloqueado> 
+  </numero>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>6</x> 
+  <y>0</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>2</x> 
+  <y>1</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>3</x> 
+  <y>1</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>0</x> 
+  <y>2</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>3</x> 
+  <y>2</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>5</x> 
+  <y>2</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>2</x> 
+  <y>3</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+- <objeto class="br.furb.furbot.Alien" qtdade="1">
+  <x>5</x> 
+  <y>9</y> 
+  <bloqueado>false</bloqueado> 
+  </objeto>
+  </furbot>
