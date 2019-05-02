@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 /**
  * 
- * @author Adilson Vahldick 
+ * @author Adilson Vahldick
  */
 public class MundoVisual extends JFrame {
 
@@ -63,24 +63,24 @@ public class MundoVisual extends JFrame {
 	private MundoVisual(Exercicio exercicio, String autor) throws Exception {
 		executou = false;
 		euMesmo = this;
-		
+
 		mundoFurbot = new MundoFurbot(exercicio);
-		mundoFurbot.addDisseramListener(new DisseramListener(){
+		mundoFurbot.addDisseramListener(new DisseramListener() {
 
 			@Override
 			public void disse(String texto) {
-				console.setText((new StringBuilder(String
-						.valueOf(console.getText()))).append(texto).append("\n")
-						.toString());
-                                console.setCaretPosition(console.getDocument().getLength()-1);
+				console.setText(
+						(new StringBuilder(String.valueOf(console.getText()))).append(texto).append("\n").toString());
+				console.setCaretPosition(console.getDocument().getLength() - 1);
 			}
 
 			@Override
 			public void limpar() {
 				console.setText("");
-			}});
+			}
+		});
 
-		mundoFurbot.addFinalizouExecucaoListener(new FinalizouExecucaoListener(){
+		mundoFurbot.addFinalizouExecucaoListener(new FinalizouExecucaoListener() {
 
 			@Override
 			public void finalizouExecucao() {
@@ -95,18 +95,19 @@ public class MundoVisual extends JFrame {
 					jbExecutar.setEnabled(true);
 					jbParar.setEnabled(false);
 					jbRenovar.setEnabled(true);
-                                        jbAjuda.setEnabled(true);
-                                        if(!Furbot.ajuda) {
-                                            jbCodigo.setEnabled(false);
-                                        }
+					jbAjuda.setEnabled(true);
+					if (!Furbot.ajuda) {
+						jbCodigo.setEnabled(false);
+					}
 				}
-			}});
-		
+			}
+		});
+
 		initComponents(exercicio, autor);
 	}
 
-	public MundoVisual(String autor, Exercicio exercicio, Class<?> furbotClass,
-			String nomesArquivosXML[]) throws Exception {
+	public MundoVisual(String autor, Exercicio exercicio, Class<?> furbotClass, String nomesArquivosXML[])
+			throws Exception {
 		this(exercicio, autor);
 		this.nomesArquivosXML = nomesArquivosXML;
 		this.furbotClass = furbotClass;
@@ -115,9 +116,9 @@ public class MundoVisual extends JFrame {
 	private void initComponents(Exercicio exercicio, String autor) {
 		setResizable(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		String title = "Mundo do Furbot v " + Furbot.VERSAO; 
+		String title = "Mundo do Furbot v " + Furbot.VERSAO;
 		if (autor != null) {
-			title = title + " ["+autor+"]";
+			title = title + " [" + autor + "]";
 		}
 		setTitle(title);
 		JPanel jp = getEnunciado(exercicio.getEnunciado());
@@ -130,7 +131,7 @@ public class MundoVisual extends JFrame {
 		JScrollPane scroll = new JScrollPane(console);
 		console.setEditable(false);
 		console.setRows(5);
-                console.setAutoscrolls(true);                
+		console.setAutoscrolls(true);
 		getContentPane().add(scroll, "South");
 		addWindowListener(new WindowAdapter() {
 
@@ -139,7 +140,7 @@ public class MundoVisual extends JFrame {
 			}
 
 		});
-		
+
 		pack();
 		setLocationRelativeTo(null);
 		setVisible(true);
@@ -165,29 +166,29 @@ public class MundoVisual extends JFrame {
 
 			public void actionPerformed(ActionEvent arg0) {
 				Furbot.ajuda = false;
-                                mundoAtual = 0;
+				mundoAtual = 0;
 				executarProxMundo = false;
 				novaSequencia(exercicio);
 				executar(exercicio);
 			}
 		};
 		jbExecutar.addActionListener(action);
-                
-                jbParar = new JButton("Stop");
+
+		jbParar = new JButton("Stop");
 		jbParar.setEnabled(false);
 		jpBotoes.add(jbParar);
 		jbParar.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
 				mundoFurbot.parar();
-                                jbExecutar.removeAll();
-				//jbExecutar.setEnabled(true);
+				jbExecutar.removeAll();
+				// jbExecutar.setEnabled(true);
 				jbParar.setEnabled(false);
-                                if(Furbot.ajuda) {
-                                    jbCodigo.setEnabled(true);                                    
-                                } else {
-                                    jbCodigo.setEnabled(false);
-                                }
+				if (Furbot.ajuda) {
+					jbCodigo.setEnabled(true);
+				} else {
+					jbCodigo.setEnabled(false);
+				}
 			}
 
 		});
@@ -206,58 +207,52 @@ public class MundoVisual extends JFrame {
 					e.printStackTrace();
 				}
 				executou = false;
-                                Furbot.le = null;
-                                Furbot.le = new ArrayList<String>();
-                                jbCodigo.setEnabled(false);
+				Furbot.le = null;
+				Furbot.le = new ArrayList<String>();
+				jbCodigo.setEnabled(false);
 				mundoFurbot.requestFocus();
 			}
 
 		});
-                jbAjuda = new JButton("Me ajude");
+		jbAjuda = new JButton("Me ajude");
 		jpBotoes.add(jbAjuda);
 		jbAjuda.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-                                String info = "Modo de ajuda.\n\n" +
-                                              "Com ajuda você pode controlar o\n" + 
-                                        "robo livremente, todos os seus comandos\n" + 
-                                        "serão armazenados, para posteriormente \n" +
-                                        "gerar o código.\n" + 
-                                        "Comandos: \n\n" + 
-                                        " - Setas direcionais para controlar o robo.\n" + 
-                                        " Ao se mover na direção de algum objeto, é possível\n" +
-                                        " empurrar, remover, contar ou acumular o valor do\n" +
-                                        " objeto.\n" +
-                                        " - Tecla D para escrever algo que deve ser dito.\n" +
-                                        " - Tecla P para que o robo informe sua posição.\n" +
-                                        "Ao finalizar clique no botão Stop.\n" + 
-                                        "Então você tera a opção de gerar o codigo\n" + 
-                                        "baseado nos comandos que você fez o robo\n" + 
-                                        "executar.";
-                                
-                                JOptionPane.showMessageDialog(null, info);
-                                Furbot.le = new ArrayList<String>();
-                                slider.setValue(10);
-				Furbot.ajuda = true;                                                                mundoAtual = 0;
+				String info = "Modo de ajuda.\n\n" + "Com ajuda você pode controlar o\n"
+						+ "robo livremente, todos os seus comandos\n" + "serão armazenados, para posteriormente \n"
+						+ "gerar o código.\n" + "Comandos: \n\n" + " - Setas direcionais para controlar o robo.\n"
+						+ " Ao se mover na direção de algum objeto, é possível\n"
+						+ " empurrar, remover, contar ou acumular o valor do\n" + " objeto.\n"
+						+ " - Tecla D para escrever algo que deve ser dito.\n"
+						+ " - Tecla P para que o robo informe sua posição.\n"
+						+ "Ao finalizar clique no botão Stop.\n" + "Então você tera a opção de gerar o codigo\n"
+						+ "baseado nos comandos que você fez o robo\n" + "executar.";
+
+				JOptionPane.showMessageDialog(null, info);
+				Furbot.le = new ArrayList<String>();
+				slider.setValue(10);
+				Furbot.ajuda = true;
+				mundoAtual = 0;
 				executarProxMundo = false;
 				novaSequencia(exercicio);
 				executar(exercicio);
-                                jbCodigo.setEnabled(false);
+				jbCodigo.setEnabled(false);
 			}
 
 		});
-                
-                jbCodigo = new JButton("Gerar Código");
-                jbCodigo.setEnabled(false);
+
+		jbCodigo = new JButton("Gerar Código");
+		jbCodigo.setEnabled(false);
 		jpBotoes.add(jbCodigo);
 		jbCodigo.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-                            Furbot.gerarCodigo();
-                            
+				Furbot.gerarCodigo();
+
 			}
 
-		});                
+		});
 		JPanel jpSlider = new JPanel(new GridLayout(2, 1));
 		slider = new JSlider();
 		slider.setMaximum(2000);
@@ -267,7 +262,7 @@ public class MundoVisual extends JFrame {
 
 			public void stateChanged(ChangeEvent ev) {
 				mundoFurbot.setTempoEspera(slider.getValue());
-				mundoFurbot.requestFocus();                                
+				mundoFurbot.requestFocus();
 			}
 
 		});
@@ -276,8 +271,8 @@ public class MundoVisual extends JFrame {
 		jp.add(jpSlider);
 		return jconsole;
 	}
-        
-        private void novaSequencia(Exercicio exercicio) {
+
+	private void novaSequencia(Exercicio exercicio) {
 		jlEnunciado.setText(exercicio.getEnunciado());
 		atributos.clear();
 	}
@@ -291,42 +286,41 @@ public class MundoVisual extends JFrame {
 				pack();
 			} catch (Exception e) {
 				e.printStackTrace();
-			}                
-                habilitarBotoesExecucao();                
+			}
+		habilitarBotoesExecucao();
 		mundoFurbot.executar();
 		executou = true;
-		mundoFurbot.requestFocus();                
+		mundoFurbot.requestFocus();
 	}
 
 	private void habilitarBotoesExecucao() {
 		jbExecutar.setEnabled(false);
 		jbParar.setEnabled(true);
 		jbRenovar.setEnabled(false);
-                jbCodigo.setEnabled(false);
-                jbAjuda.setEnabled(false);
+		jbCodigo.setEnabled(false);
+		jbAjuda.setEnabled(false);
 	}
-        
-        public static void iniciar(String nomeArquivoXML) {
+
+	public static void iniciar(String nomeArquivoXML) {
 		iniciar(nomeArquivoXML, null, null);
 	}
 
 	public static void iniciar(String nomeArquivoXML, String autor) {
 		iniciar(nomeArquivoXML, null, autor);
 	}
-	
+
 	public static void iniciar(String nomeArquivoXML, Class<?> furbotClass, final String autor) {
 		try {
-			final Exercicio exercicio = ExercicioFactory.create(nomeArquivoXML,furbotClass);
+			final Exercicio exercicio = ExercicioFactory.create(nomeArquivoXML, furbotClass);
 			EventQueue.invokeLater(new Runnable() {
 
 				public void run() {
 					try {
 						new MundoVisual(exercicio, autor);
 					} catch (ClassNotFoundException classE) {
-						JOptionPane.showMessageDialog(null, (new StringBuilder(
-								"Voc\352 precisa criar uma classe de nome "))
-								.append(classE.getLocalizedMessage())
-								.toString());
+						JOptionPane.showMessageDialog(null,
+								(new StringBuilder("Voc\352 precisa criar uma classe de nome "))
+										.append(classE.getLocalizedMessage()).toString());
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -339,20 +333,18 @@ public class MundoVisual extends JFrame {
 		}
 
 	}
-	
+
 	public static void iniciar(String nomeArquivoXML, Class<?> furbotClass) {
 		iniciar(nomeArquivoXML, furbotClass, null);
 	}
 
-	
 	public static void iniciarSequencia(Class<?> furbotClass, String... nomesArquivosXML) {
 		iniciarSequencia(null, furbotClass, nomesArquivosXML);
 	}
-	
+
 	public static void iniciarSequencia(final String autor, Class<?> furbotClass, String... nomesArquivosXML) {
 		try {
-			final Exercicio exercicio = ExercicioFactory.create(
-					nomesArquivosXML[0], furbotClass);
+			final Exercicio exercicio = ExercicioFactory.create(nomesArquivosXML[0], furbotClass);
 			final String arquivosXML[] = nomesArquivosXML;
 			final Class<?> classe = furbotClass;
 			EventQueue.invokeLater(new Runnable() {
@@ -361,10 +353,9 @@ public class MundoVisual extends JFrame {
 					try {
 						new MundoVisual(autor, exercicio, classe, arquivosXML);
 					} catch (ClassNotFoundException classE) {
-						JOptionPane.showMessageDialog(null, (new StringBuilder(
-								"Voc\352 precisa criar uma classe de nome "))
-								.append(classE.getLocalizedMessage())
-								.toString());
+						JOptionPane.showMessageDialog(null,
+								(new StringBuilder("Voc\352 precisa criar uma classe de nome "))
+										.append(classE.getLocalizedMessage()).toString());
 					} catch (Exception e) {
 						e.printStackTrace();
 					}
@@ -396,6 +387,6 @@ public class MundoVisual extends JFrame {
 	private JButton jbParar;
 	private JSlider slider;
 	private JButton jbRenovar;
-        private JButton jbCodigo;
-        private JButton jbAjuda;
+	private JButton jbCodigo;
+	private JButton jbAjuda;
 }

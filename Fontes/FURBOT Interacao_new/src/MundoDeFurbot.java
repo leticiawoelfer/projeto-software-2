@@ -12,6 +12,7 @@ public class MundoDeFurbot extends Furbot {
     }
 
     public static void main(String[] args) {
-        MundoVisual.iniciar("MundoDeFurbot.xml"); // inicia o mundo do furbot
+        //MundoVisual.iniciar("MundoDeFurbot.xml"); // inicia o mundo do furbot
+    	MundoVisual.iniciar("MundoDeFurbot2_modify.xml");
     }
 }

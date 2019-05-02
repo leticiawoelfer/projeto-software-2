@@ -1,0 +1,22 @@
+<furbot>
+	<enunciado>
+	Faça o robô andar em diagonal a partir da posicao inicial (0,0). &lt;br&gt;
+	Lembre-se de que as coordenadas sempre serão fornecidas como (x, y).&lt;br&gt;
+    Considere que o mundo sempre será quadrado, nunca retangular.&lt;br&gt;
+	A primeira coluna e linhas são a de número ZERO. 
+	</enunciado>
+	
+	<mundo>
+		<qtdMaxLinCol>10</qtdMaxLinCol>
+		<qtdMinLinCol>4</qtdMinLinCol>
+		<explodir>true</explodir>
+	</mundo>
+	
+	<robo>
+		<x>0</x>
+		<y>0</y>
+	</robo>
+	
+	
+	
+</furbot>
