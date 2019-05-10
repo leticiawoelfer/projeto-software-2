@@ -1,6 +1,9 @@
 package br.furb.furbot.suporte;
 
 import br.furb.furbot.MundoVisual;
+
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -110,7 +113,7 @@ public class Exercicio extends GrupoObjetos {
 		Mundo m = new Mundo(qtdadeLin, qtdadeCol);
 		m.setExplodir(explodir);
 		m.setUsarLinhasNaGrade(usarLinhasNaGrade);
-		m.setTamCell(getTamanhoCel());
+		m.setTamCell(TamanhoCelula.valueOf(getTamanhoCel()));
 		List<ElementoExercicio> elemsAUsar = new ArrayList<ElementoExercicio>();
 		elemsAUsar.addAll(getElementos());
 		List<GrupoObjetos> grupos = getGruposObjetos();
@@ -143,7 +146,22 @@ public class Exercicio extends GrupoObjetos {
 	}
 
 	private void calcularQtdadeLinCol() {
-		if (random.isRandom()) {
+		//aqui identifica o tamanho da tela
+		int maxLinhasColunas = getQtdMaxLinCol();
+		int minLinhasColunas = getQtdMinLinCol();
+	    
+	    Toolkit tk = Toolkit.getDefaultToolkit();
+	    Dimension d = tk.getScreenSize();
+	    
+	    
+	    
+	    setQtdadeLin(10);
+	    setQtdadeCol(10);		
+		/*
+		System.out.println("Screen width = " + d.width);
+	    System.out.println("Screen height = " + d.height);
+	    System.out.println("aqui");
+		 * if (random.isRandom()) {
 			int limiteSupCol = random.getLimiteSupRandomX();
 			int limiteSupLin = random.getLimiteSupRandomY();
 			int limiteInfCol = random.getLimiteInfRandomX();
@@ -164,7 +182,7 @@ public class Exercicio extends GrupoObjetos {
 				qtdadeCol = limiteInfCol;
 			if (qtdadeLin < limiteInfLin)
 				qtdadeLin = limiteInfLin;
-		}
+		}*/
 	}
 
 	private void adicionarObjetosMundo(boolean random, boolean dependentes, Mundo m, List<String> posUsadas,

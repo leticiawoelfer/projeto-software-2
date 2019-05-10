@@ -99,7 +99,7 @@ public class MundoFurbot extends JPanel {
 
 		public MapaModel(int qtasColunas, int qtasLinhas, TamanhoCelula tamanhoCelula) {
 			this.mundo = new Mundo(qtasLinhas, qtasColunas);
-			this.mundo.setTamCell(tamanhoCelula.toString());
+			this.mundo.setTamCell(tamanhoCelula);
 			this.mundo.addListener(this);
 		}
 

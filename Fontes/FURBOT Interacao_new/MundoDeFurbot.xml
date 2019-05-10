@@ -7,8 +7,8 @@
 	</enunciado>
 	
 	<mundo>
-		<qtdadeCol>4</qtdadeCol>
-		<qtdadeLin>4</qtdadeLin>
+		<qtdMaxLinCol>10</qtdMaxLinCol>
+		<qtdMinLinCol>4</qtdMinLinCol>
 		<explodir>true</explodir>
 	</mundo>
 	

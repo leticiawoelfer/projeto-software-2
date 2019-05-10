@@ -24,11 +24,11 @@ public class Grids extends Frame {
    * Construct a GfxDemo2 given its title, width and height. Uses a
    * GridBagLayout to make the Canvas resize properly.
    */
-  public Grids(String title, int w, int h, int rows, int cols) {
+  public Grids(String title, int width, int height, int rows, int cols) {
     setTitle(title);
 
     // Now create a Canvas and add it to the Frame.
-    GridCanvas xyz = new GridCanvas(w, h, rows, cols);
+    GridCanvas xyz = new GridCanvas(width, height, rows, cols);
     add(xyz);
 
     addWindowListener(new WindowAdapter() {
@@ -52,7 +52,7 @@ public class Grids extends Frame {
     System.out.println("Screen width = " + d.width);
     System.out.println("Screen height = " + d.height);
     
-    Grids g = new Grids("Test", d.width-100, d.height-100, maxLinhas,maxColunas);
+    Grids g = new Grids("Test", d.width-100, d.height-100, maxLinhas, maxColunas);
     g.setVisible(true);
   }
 

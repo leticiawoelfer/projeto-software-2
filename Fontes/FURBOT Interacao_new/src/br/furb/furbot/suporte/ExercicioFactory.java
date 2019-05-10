@@ -19,7 +19,7 @@ public class ExercicioFactory {
 		Exercicio exercicio = create(nomeArquivoXML);
 		if (furbotClass != null) {
 			exercicio.setClassRobo(furbotClass.getName());
-		}
+		}		
 		return exercicio;
 	}
 
@@ -31,15 +31,11 @@ public class ExercicioFactory {
 
 		d.addSetProperties("furbot");
 		d.addBeanPropertySetter("*/enunciado", "enunciado");
-		//d.addBeanPropertySetter("*/mundo/qtdadeLin");
-		//d.addBeanPropertySetter("*/mundo/qtdadeCol");
 		d.addBeanPropertySetter("*/mundo/qtdMaxLinCol");
 		d.addBeanPropertySetter("*/mundo/qtdMinLinCol");		
 		d.addBeanPropertySetter("*/mundo/explodir");
 		d.addBeanPropertySetter("*/mundo/usarLinhasNaGrade");
 		d.addBeanPropertySetter("*/mundo/tamanhoCel");
-		
-		d.getClassLoader().get
 
 		addRulesRandom(d, "*/mundo");
 		d.addObjectCreate("*/grupo", GrupoObjetos.class);

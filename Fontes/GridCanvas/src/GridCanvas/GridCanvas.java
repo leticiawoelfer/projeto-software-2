@@ -19,10 +19,9 @@ import java.awt.event.WindowEvent;
  * @author Ian Darwin, http://www.darwinsys.com/
  */
 public class GridCanvas extends Canvas {
-  int width, height;
-
+  int width;
+  int height;
   int rows;
-
   int cols;
 
   public GridCanvas(int w, int h, int r, int c) {
