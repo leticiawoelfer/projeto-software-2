@@ -202,7 +202,7 @@ public class MundoFurbot extends JPanel {
 	public void reiniciar() throws Exception {
 		if (this.exercicio == null) {
 			constroiGrade(new MapaModel(mapaModel.mundo.getQtdadeCol(), mapaModel.mundo.getQtdadeLin(),
-					TamanhoCelula.pixelsToTamanhoCelula(mapaModel.mundo.getTamCell())));
+					TamanhoCelula.getEnumByPixels(mapaModel.mundo.getTamCell())));
 		} else {
 			constroiGrade(new MapaModel(exercicio));
 		}

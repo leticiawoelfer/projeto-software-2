@@ -371,15 +371,15 @@ public class Mundo {
 
 	public void setTamCell(TamanhoCelula tamanhoCel) {
 		switch (tamanhoCel) {
-		case Grande:
+		case GRANDE:
 		default:
-			this.tamCell = 50;
+			this.tamCell = TamanhoCelula.GRANDE.getTamanho();
 			break;		
-		case Media:
-			this.tamCell = 40;
+		case MEDIA:
+			this.tamCell = TamanhoCelula.MEDIA.getTamanho();
 			break;
-		case Pequena:
-			this.tamCell = 30;
+		case PEQUENA:
+			this.tamCell = TamanhoCelula.PEQUENA.getTamanho();
 			break;
 		}
 	}

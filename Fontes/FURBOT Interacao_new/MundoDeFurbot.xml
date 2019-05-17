@@ -7,9 +7,10 @@
 	</enunciado>
 	
 	<mundo>
-		<qtdMaxLinCol>10</qtdMaxLinCol>
+		<qtdMaxLinCol>20</qtdMaxLinCol>
 		<qtdMinLinCol>4</qtdMinLinCol>
 		<explodir>true</explodir>
+		<tamanhoCel>G</tamanhoCel>
 	</mundo>
 	
 	<robo>

@@ -63,7 +63,7 @@ public class Exercicio extends GrupoObjetos {
 	public void setQtdadeCol(int qtdadeCol) {
 		this.qtdadeCol = qtdadeCol;
 	}
-	
+
 	public int getQtdMaxLinCol() {
 		return qtdMaxLinCol;
 	}
@@ -113,7 +113,7 @@ public class Exercicio extends GrupoObjetos {
 		Mundo m = new Mundo(qtdadeLin, qtdadeCol);
 		m.setExplodir(explodir);
 		m.setUsarLinhasNaGrade(usarLinhasNaGrade);
-		m.setTamCell(TamanhoCelula.valueOf(getTamanhoCel()));
+		m.setTamCell(TamanhoCelula.getEnumBySigla(getTamanhoCel()));
 		List<ElementoExercicio> elemsAUsar = new ArrayList<ElementoExercicio>();
 		elemsAUsar.addAll(getElementos());
 		List<GrupoObjetos> grupos = getGruposObjetos();
@@ -146,43 +146,51 @@ public class Exercicio extends GrupoObjetos {
 	}
 
 	private void calcularQtdadeLinCol() {
-		//aqui identifica o tamanho da tela
-		int maxLinhasColunas = getQtdMaxLinCol();
-		int minLinhasColunas = getQtdMinLinCol();
-	    
-	    Toolkit tk = Toolkit.getDefaultToolkit();
-	    Dimension d = tk.getScreenSize();
-	    
-	    
-	    
-	    setQtdadeLin(10);
-	    setQtdadeCol(10);		
+		// aqui identifica o tamanho da tela
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension d = tk.getScreenSize();
+
+		int tamanhoTela = d.height <= d.width ? d.height : d.width;
+
+		TamanhoCelula tamanhoCelula = TamanhoCelula.getEnumBySigla(getTamanhoCel());
+		switch (tamanhoCelula) {
+		case GRANDE:
+			tamanhoTela = tamanhoTela - 250;
+			break;
+		case MEDIA:
+			tamanhoTela = tamanhoTela - 250;
+			break;
+		case PEQUENA:
+			tamanhoTela = tamanhoTela - 250;
+			break;
+		}
+
+		int tamanhoCel = tamanhoCelula.getTamanho();
+		Float divisao = (float) (tamanhoTela / tamanhoCel);
+		int qntLinCol = divisao.intValue();
+		if (qntLinCol > getQtdMaxLinCol()) {
+			qntLinCol = getQtdMaxLinCol();
+		}
+		if (qntLinCol < getQtdMinLinCol()) {
+			qntLinCol = getQtdMinLinCol();
+		}
+		setQtdadeLin(qntLinCol);
+		setQtdadeCol(qntLinCol);
 		/*
-		System.out.println("Screen width = " + d.width);
-	    System.out.println("Screen height = " + d.height);
-	    System.out.println("aqui");
-		 * if (random.isRandom()) {
-			int limiteSupCol = random.getLimiteSupRandomX();
-			int limiteSupLin = random.getLimiteSupRandomY();
-			int limiteInfCol = random.getLimiteInfRandomX();
-			int limiteInfLin = random.getLimiteInfRandomY();
-			if (limiteSupCol <= 0)
-				limiteSupCol = 10;
-			if (limiteSupLin <= 0)
-				limiteSupLin = 10;
-			if (random.isRandomX())
-				qtdadeCol = sorteio.nextInt(limiteSupCol);
-			else if (random.isRandomY()) {
-				qtdadeLin = sorteio.nextInt(limiteSupLin);
-			} else {
-				qtdadeLin = sorteio.nextInt(limiteSupLin);
-				qtdadeCol = sorteio.nextInt(limiteSupCol);
-			}
-			if (qtdadeCol < limiteInfCol)
-				qtdadeCol = limiteInfCol;
-			if (qtdadeLin < limiteInfLin)
-				qtdadeLin = limiteInfLin;
-		}*/
+		 * System.out.println("Screen width = " + d.width);
+		 * System.out.println("Screen height = " + d.height);
+		 * System.out.println("aqui"); if (random.isRandom()) { int limiteSupCol =
+		 * random.getLimiteSupRandomX(); int limiteSupLin =
+		 * random.getLimiteSupRandomY(); int limiteInfCol =
+		 * random.getLimiteInfRandomX(); int limiteInfLin =
+		 * random.getLimiteInfRandomY(); if (limiteSupCol <= 0) limiteSupCol = 10; if
+		 * (limiteSupLin <= 0) limiteSupLin = 10; if (random.isRandomX()) qtdadeCol =
+		 * sorteio.nextInt(limiteSupCol); else if (random.isRandomY()) { qtdadeLin =
+		 * sorteio.nextInt(limiteSupLin); } else { qtdadeLin =
+		 * sorteio.nextInt(limiteSupLin); qtdadeCol = sorteio.nextInt(limiteSupCol); }
+		 * if (qtdadeCol < limiteInfCol) qtdadeCol = limiteInfCol; if (qtdadeLin <
+		 * limiteInfLin) qtdadeLin = limiteInfLin; }
+		 */
 	}
 
 	private void adicionarObjetosMundo(boolean random, boolean dependentes, Mundo m, List<String> posUsadas,

@@ -6,7 +6,14 @@ public class MundoDeFurbot extends Furbot {
     public void inteligencia() throws Exception {
     //escreva o seu código aqui
       andarDireita();
+      andarDireita();
              
+      diga("ola mundo!!!!");
+      diga("cheguei ao fim do algoritmo... e estou vivo!!!");
+      diga("ola mundo!!!!");
+      diga("cheguei ao fim do algoritmo... e estou vivo!!!");
+      diga("ola mundo!!!!");
+      diga("cheguei ao fim do algoritmo... e estou vivo!!!");
       diga("ola mundo!!!!");
       diga("cheguei ao fim do algoritmo... e estou vivo!!!");
     }
