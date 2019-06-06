@@ -5,3 +5,13 @@ Lista de tarefas:
 	1.2 abrir o furbot de acordo com as informações capturadas.
 	
 2. Melhorar o campo de "Diga", no caso o campo de mensagem, para que ele role conforme vai aparecendo as informações. Ou então dê algum tipo de alerta quando foi escrito informações lá, pois hoje se o usuario nao rolar para baixo acaba nao vendo as informações escritas la. Pode ser redimensionamento também.
+
+
+Soma ((x – média de x) * (y – média de y))
+
+Raiz quadrada ( (soma de (x – média de x)2) * (soma de (y – média de y)2 )) 
+
+
+b0 = 8.9598
+b1 = 0.0139
+b2 = -0.8738

@@ -37,7 +37,7 @@ public abstract class Furbot extends ObjetoDoMundoAdapter {
     }
 
     public ImageIcon buildImage() {
-        ImageIcon image = LoadImage.getInstance().getIcon("imagens/r2d2-icon.gif");
+        ImageIcon image = LoadImage.getInstance().getIcon("imagens/furbot.png");//era r2d2-icon.gif
 
         if (ehDependenteEnergia()) {
             BufferedImage img = new BufferedImage(50, 50, 1);

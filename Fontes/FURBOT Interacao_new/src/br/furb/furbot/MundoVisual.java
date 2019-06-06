@@ -319,7 +319,7 @@ public class MundoVisual extends JFrame {
 						new MundoVisual(exercicio, autor);
 					} catch (ClassNotFoundException classE) {
 						JOptionPane.showMessageDialog(null,
-								(new StringBuilder("Voc\352 precisa criar uma classe de nome "))
+								(new StringBuilder("Você precisa criar uma classe de nome "))
 										.append(classE.getLocalizedMessage()).toString());
 					} catch (Exception e) {
 						e.printStackTrace();
@@ -354,7 +354,7 @@ public class MundoVisual extends JFrame {
 						new MundoVisual(autor, exercicio, classe, arquivosXML);
 					} catch (ClassNotFoundException classE) {
 						JOptionPane.showMessageDialog(null,
-								(new StringBuilder("Voc\352 precisa criar uma classe de nome "))
+								(new StringBuilder("Você precisa criar uma classe de nome "))
 										.append(classE.getLocalizedMessage()).toString());
 					} catch (Exception e) {
 						e.printStackTrace();

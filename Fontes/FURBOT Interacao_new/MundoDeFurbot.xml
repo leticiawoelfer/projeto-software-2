@@ -10,12 +10,11 @@
 		<qtdMaxLinCol>20</qtdMaxLinCol>
 		<qtdMinLinCol>4</qtdMinLinCol>
 		<explodir>true</explodir>
-		<tamanhoCel>G</tamanhoCel>
 	</mundo>
 	
 	<robo>
-		<x>0</x>
-		<y>0</y>
+		<x>1</x>
+		<y>1</y>
 	</robo>
 	
 	
