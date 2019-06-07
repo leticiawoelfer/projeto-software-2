@@ -1,0 +1,41 @@
+<furbot>
+<enunciado>Lista de Exercícios 2 - Exercício 6.
+  <br> Faça o robô andar ao redor do mundo e contar os aliens</br>
+  <br> que ele encontrou no caminho. O robô deve voltar a célula </br>
+  <br> de nascença para então falar a quantidade de aliens</br>
+  <br>encontrados: no total, nas linhas pares, nas linhas ímpares,</br>
+  <br> nas colunas pares e nas colunas ímpares.</br>
+</enunciado> 
+<mundo>
+<random limiteInfY="3" limiteSupY="8" limiteInfX="3" limiteSupX="8" />
+<explodir>true</explodir>
+</mundo>
+<robo>
+<random />
+</robo>
+<!--  aliens -->
+<objeto class="br.furb.furbot.Alien">
+<random />
+<bloqueado>false</bloqueado>
+</objeto>
+<objeto class="br.furb.furbot.Alien">
+<random />
+<bloqueado>false</bloqueado>
+</objeto>
+<objeto class="br.furb.furbot.Alien">
+<random />
+<bloqueado>false</bloqueado>
+</objeto>
+<objeto class="br.furb.furbot.Alien">
+<random />
+<bloqueado>false</bloqueado>
+</objeto>
+<objeto class="br.furb.furbot.Alien">
+<random />
+<bloqueado>false</bloqueado>
+</objeto>
+<objeto class="br.furb.furbot.Alien">
+<random />
+<bloqueado>false</bloqueado>
+</objeto>
+</furbot>

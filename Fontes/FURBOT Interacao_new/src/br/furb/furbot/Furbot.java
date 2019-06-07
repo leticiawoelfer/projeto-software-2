@@ -59,7 +59,6 @@ public abstract class Furbot extends ObjetoDoMundoAdapter {
     }
 
     public void executar() throws Exception {
-        //MundoException ex = null;
         try {
             esperar(1);
             if (!ajuda) {

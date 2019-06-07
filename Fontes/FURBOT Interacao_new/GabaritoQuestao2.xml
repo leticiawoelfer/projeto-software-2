@@ -1,0 +1,244 @@
+
+<furbot>
+   <enunciado>
+		Questão da Prova:  &lt;br&gt;
+        a) Faça o furbot andar pelo perimetro e localizar a entrada do labirinto;&lt;br&gt;
+        b) Faça-o continuar o percurso até encontrar a saída do labirinto;&lt;br&gt;
+        c) faça o furbot apresentar o seu nome logo no início da execução.&lt;br&gt;
+        OBSERVAÇÕES:&lt;br&gt;
+        -É garantido que não haverão sub-labirintos;&lt;br&gt;
+        -O labirinto de avaliação será diferente do apresentado na prova;&lt;br&gt;
+        -A prova encerra-se as 20:15.
+   </enunciado>
+   <mundo>
+      <qtdadeLin>11</qtdadeLin>
+      <qtdadeCol>11</qtdadeCol>
+      <explodir>false</explodir>
+      <tamanhoCel>Pequena</tamanhoCel>
+   </mundo>
+   <robo>
+      <x>0</x>
+      <y>0</y>
+   </robo>
+   <objeto class="br.furb.furbot.Parede">  <x>1</x> <y>1</y> <bloqueado>false</bloqueado> </objeto>
+   <objeto class="br.furb.furbot.Parede">  <x>2</x> <y>1</y> <bloqueado>false</bloqueado> </objeto>
+   <objeto class="br.furb.furbot.Parede">  <x>3</x> <y>1</y>  <bloqueado>false</bloqueado></objeto>
+   <objeto class="br.furb.furbot.Parede"> <x>1</x> <y>2</y> <bloqueado>false</bloqueado> </objeto>
+   <objeto class="br.furb.furbot.Parede"><x>1</x> <y>4</y> <bloqueado>false</bloqueado> </objeto>
+   <objeto class="br.furb.furbot.Parede"><x>2</x> <y>2</y> <bloqueado>false</bloqueado> </objeto>
+   <objeto class="br.furb.furbot.Parede"> <x>2</x> <y>4</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>3</x>
+      <y>2</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>1</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>3</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>4</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>5</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>6</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>3</x>
+      <y>6</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>3</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>5</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>6</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>7</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>1</x>
+      <y>5</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>1</x>
+      <y>6</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>1</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>1</x>
+      <y>8</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>1</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>2</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>3</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>4</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>5</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>6</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>7</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>8</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>9</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>4</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>8</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>7</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>6</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>5</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>2</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>1</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>8</x>
+      <y>5</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>7</x>
+      <y>5</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>6</x>
+      <y>5</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>5</x>
+      <y>3</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>6</x>
+      <y>3</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>7</x>
+      <y>3</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>9</x>
+      <y>3</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>8</x>
+      <y>1</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede">
+      <x>7</x>
+      <y>1</y>
+      <bloqueado>false</bloqueado>
+   </objeto>
+   <objeto class="br.furb.furbot.Parede"> <x>6</x> <y>1</y> <bloqueado>false</bloqueado></objeto>
+   
+</furbot>

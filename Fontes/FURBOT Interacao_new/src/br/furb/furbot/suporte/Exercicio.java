@@ -193,9 +193,7 @@ public class Exercicio extends GrupoObjetos {
 		 */
 	}
 
-	private void adicionarObjetosMundo(boolean random, boolean dependentes, Mundo m, List<String> posUsadas,
-			List<ElementoExercicio> elems)
-			throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+	private void adicionarObjetosMundo(boolean random, boolean dependentes, Mundo m, List<String> posUsadas, List<ElementoExercicio> elems)	throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 		ArrayList<ElementoExercicio> elementosExtraidos = extrairElementosPosicao(random, dependentes, elems);
 		for (ElementoExercicio elem : elementosExtraidos) {
 			m.addObjetoMundoImpl(criarObjetoMundoImpl(m, posUsadas, elem, elem.getClazz()));
@@ -214,8 +212,7 @@ public class Exercicio extends GrupoObjetos {
 		return elems;
 	}
 
-	private ObjetoMundoImpl criarObjetoMundoImpl(Mundo mundo, List<String> posUsadas, ElementoExercicio elemento,
-			String clazz) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+	private ObjetoMundoImpl criarObjetoMundoImpl(Mundo mundo, List<String> posUsadas, ElementoExercicio elemento, String clazz) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 		ObjetoDoMundo objMundo = (ObjetoDoMundo) Class.forName(clazz).newInstance();
 		ObjetoMundoImpl obj = objMundo.getObjetoMundoImpl();
 		obj.setMundo(mundo);
