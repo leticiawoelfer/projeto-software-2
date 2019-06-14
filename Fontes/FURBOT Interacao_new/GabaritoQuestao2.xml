@@ -3,12 +3,12 @@
    <enunciado>
 		Questão da Prova:  &lt;br&gt;
         a) Faça o furbot andar pelo perimetro e localizar a entrada do labirinto;&lt;br&gt;
-        b) Faça-o continuar o percurso até encontrar a saída do labirinto;&lt;br&gt;
+        b) Façao continuar o percurso até encontrar a saída do labirinto;&lt;br&gt;
         c) faça o furbot apresentar o seu nome logo no início da execução.&lt;br&gt;
         OBSERVAÇÕES:&lt;br&gt;
-        -É garantido que não haverão sub-labirintos;&lt;br&gt;
-        -O labirinto de avaliação será diferente do apresentado na prova;&lt;br&gt;
-        -A prova encerra-se as 20:15.
+        É garantido que não haverão sublabirintos;&lt;br&gt;
+        O labirinto de avaliação será diferente do apresentado na prova;&lt;br&gt;
+        A prova encerrase as 20:15.
    </enunciado>
    <mundo>
       <qtdadeLin>11</qtdadeLin>

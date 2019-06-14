@@ -1,5 +1,5 @@
 <furbot>
-<enunciado>Lista de Exercícios 2 - Exercício 6.
+<enunciado>Lista de Exercícios 2  Exercício 6.
   <br> Faça o robô andar ao redor do mundo e contar os aliens</br>
   <br> que ele encontrou no caminho. O robô deve voltar a célula </br>
   <br> de nascença para então falar a quantidade de aliens</br>
@@ -13,7 +13,7 @@
 <robo>
 <random />
 </robo>
-<!--  aliens -->
+<!  aliens >
 <objeto class="br.furb.furbot.Alien">
 <random />
 <bloqueado>false</bloqueado>

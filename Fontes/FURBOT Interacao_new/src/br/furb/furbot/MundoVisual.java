@@ -209,7 +209,7 @@ public class MundoVisual extends JFrame {
 				executou = false;
 				Furbot.le = null;
 				Furbot.le = new ArrayList<String>();
-				jbCodigo.setEnabled(false);
+				jbCodigo.setEnabled(true);
 				mundoFurbot.requestFocus();
 			}
 
@@ -237,13 +237,13 @@ public class MundoVisual extends JFrame {
 				executarProxMundo = false;
 				novaSequencia(exercicio);
 				executar(exercicio);
-				jbCodigo.setEnabled(false);
+				jbCodigo.setEnabled(true);
 			}
 
 		});
 
 		jbCodigo = new JButton("Gerar Código");
-		jbCodigo.setEnabled(false);
+		jbCodigo.setEnabled(true);
 		jpBotoes.add(jbCodigo);
 		jbCodigo.addActionListener(new ActionListener() {
 

@@ -1,17 +1,36 @@
 Lista de tarefas:
 
 1. Capturar o tamanho da tela e ao abrir o furbot redimensionar o tamanho de acordo com o que foi capturado. O mundo sempre é quadrado, nunca retagular
-	1.1 no xml definir a quantidade máxima e minima de linha e de coluna. Se for identificado que a quantidade capturada for maior que a quantidade máxima, se mantem a quantidade máxima e vice-versa.
+	1.1 no xml definir a quantidade máxima e minima de linha e de coluna. Se for identificado que a quantidade capturada for maior que a quantidade máxima, se mantem a quantidade máxima e viceversa.
 	1.2 abrir o furbot de acordo com as informações capturadas.
 	
 2. Melhorar o campo de "Diga", no caso o campo de mensagem, para que ele role conforme vai aparecendo as informações. Ou então dê algum tipo de alerta quando foi escrito informações lá, pois hoje se o usuario nao rolar para baixo acaba nao vendo as informações escritas la. Pode ser redimensionamento também.
 
 
-Soma ((x – média de x) * (y – média de y))
 
-Raiz quadrada ( (soma de (x – média de x)2) * (soma de (y – média de y)2 )) 
+Cronograma final:
+
+Listar as funcionalidades novas:
+
+Pesquisar sobre as tecnologias utilizadas nesse projeto:
+
+Requisitos funcionais e nãofuncionais:
 
 
-b0 = 8.9598
-b1 = 0.0139
-b2 = -0.8738
+Entender melhor como funciona o furbot:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
