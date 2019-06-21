@@ -307,21 +307,25 @@ public class Mundo {
 	}
 
 	public synchronized void addObjetoMundoImpl(ObjetoMundoImpl objMundo, boolean embaixo) {
-		if (modelo[objMundo.getY()][objMundo.getX()] != null) {
-			ListaObjetosMundoImpl lista = null;
-			if (modelo[objMundo.getY()][objMundo.getX()].getObjetos().size() > 1) {
-				lista = (ListaObjetosMundoImpl) modelo[objMundo.getY()][objMundo.getX()];
+		try {
+			if (modelo[objMundo.getY()][objMundo.getX()] != null) {
+				ListaObjetosMundoImpl lista = null;
+				if (modelo[objMundo.getY()][objMundo.getX()].getObjetos().size() > 1) {
+					lista = (ListaObjetosMundoImpl) modelo[objMundo.getY()][objMundo.getX()];
+				} else {
+					lista = new ListaObjetosMundoImpl();
+					lista.add((ObjetoMundoImpl) modelo[objMundo.getY()][objMundo.getX()]);
+				}
+				if (embaixo)
+					lista.insert(0, objMundo);
+				else
+					lista.add(objMundo);
+				atribuirModelo(objMundo.getY(), objMundo.getX(), lista);
 			} else {
-				lista = new ListaObjetosMundoImpl();
-				lista.add((ObjetoMundoImpl) modelo[objMundo.getY()][objMundo.getX()]);
+				atribuirModelo(objMundo.getY(), objMundo.getX(), objMundo);
 			}
-			if (embaixo)
-				lista.insert(0, objMundo);
-			else
-				lista.add(objMundo);
-			atribuirModelo(objMundo.getY(), objMundo.getX(), lista);
-		} else {
-			atribuirModelo(objMundo.getY(), objMundo.getX(), objMundo);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			// TODO: handle exception
 		}
 		repintar();
 	}

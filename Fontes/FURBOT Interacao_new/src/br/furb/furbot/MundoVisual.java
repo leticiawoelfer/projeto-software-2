@@ -3,6 +3,7 @@ package br.furb.furbot;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.GridLayout;
+import java.awt.TrayIcon.MessageType;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
@@ -159,7 +160,7 @@ public class MundoVisual extends JFrame {
 		JPanel jpBotoes = new JPanel();
 		jp.add(jpBotoes);
 
-		jbExecutar = new JButton("Run");
+		jbExecutar = new JButton("Executar");
 		jpBotoes.add(jbExecutar);
 		jconsole.add(jp, "West");
 		ActionListener action = new ActionListener() {
@@ -174,7 +175,7 @@ public class MundoVisual extends JFrame {
 		};
 		jbExecutar.addActionListener(action);
 
-		jbParar = new JButton("Stop");
+		jbParar = new JButton("Parar");
 		jbParar.setEnabled(false);
 		jpBotoes.add(jbParar);
 		jbParar.addActionListener(new ActionListener() {
@@ -192,7 +193,7 @@ public class MundoVisual extends JFrame {
 			}
 
 		});
-		jbRenovar = new JButton("New");
+		jbRenovar = new JButton("Novo jogo");
 		jpBotoes.add(jbRenovar);
 		jbRenovar.addActionListener(new ActionListener() {
 
@@ -214,22 +215,26 @@ public class MundoVisual extends JFrame {
 			}
 
 		});
-		jbAjuda = new JButton("Me ajude");
+		jbAjuda = new JButton("Me ajude!");
 		jpBotoes.add(jbAjuda);
 		jbAjuda.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent arg0) {
-				String info = "Modo de ajuda.\n\n" + "Com ajuda você pode controlar o\n"
-						+ "robo livremente, todos os seus comandos\n" + "serão armazenados, para posteriormente \n"
-						+ "gerar o código.\n" + "Comandos: \n\n" + " - Setas direcionais para controlar o robo.\n"
-						+ " Ao se mover na direção de algum objeto, é possível\n"
-						+ " empurrar, remover, contar ou acumular o valor do\n" + " objeto.\n"
-						+ " - Tecla D para escrever algo que deve ser dito.\n"
-						+ " - Tecla P para que o robo informe sua posição.\n"
-						+ "Ao finalizar clique no botão Stop.\n" + "Então você tera a opção de gerar o codigo\n"
-						+ "baseado nos comandos que você fez o robo\n" + "executar.";
+				String info = "Bem-vindo ao Modo ME AJUDE!\n\n"
+						+ "No modo de ajuda você pode controlar o robo livremente,\n"
+						+ "todos os seus comandos serão armazenados, para\n"
+						+ "posteriormente gerar o código.\n\n"
+						+ "Comandos:\n"
+						+ "- Setas direcionais para controlar o robo.\n"
+						+ "- Ao se mover na direção de algum objeto, é possível\n"
+						+ "   empurrar, remover, contar ou acumular o valor do objeto.\n"
+						+ "- Tecla D para escrever algo que deve ser dito.\n"
+						+ "- Tecla P para que o robo informe sua posição.\n\n"
+						+ "Ao finalizar clique no botão Stop. Então você terá a opção de\n"
+						+ "gerar o codigo baseado nos comandos que você fez o\n"
+						+ "robo executar.";
 
-				JOptionPane.showMessageDialog(null, info);
+				JOptionPane.showMessageDialog(null, info, "Modo ME AJUDE", JOptionPane.INFORMATION_MESSAGE);
 				Furbot.le = new ArrayList<String>();
 				slider.setValue(10);
 				Furbot.ajuda = true;

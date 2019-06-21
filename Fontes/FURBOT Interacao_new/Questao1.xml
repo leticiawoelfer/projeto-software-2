@@ -6,7 +6,6 @@
 		<qtdMaxLinCol>20</qtdMaxLinCol>
 		<qtdMinLinCol>4</qtdMinLinCol>
 		<explodir>true</explodir>
-		<tamanhoCel>M</tamanhoCel>
 	</mundo>
 	<robo>
 		<x>0</x> 
