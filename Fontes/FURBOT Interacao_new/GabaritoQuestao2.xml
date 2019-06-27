@@ -11,10 +11,10 @@
         A prova encerrase as 20:15.
    </enunciado>
    <mundo>
-      <qtdadeLin>11</qtdadeLin>
-      <qtdadeCol>11</qtdadeCol>
+		<qtdMaxLinCol>20</qtdMaxLinCol>
+		<qtdMinLinCol>4</qtdMinLinCol>
+		<tamanhoCel>G</tamanhoCel>
       <explodir>false</explodir>
-      <tamanhoCel>Pequena</tamanhoCel>
    </mundo>
    <robo>
       <x>0</x>

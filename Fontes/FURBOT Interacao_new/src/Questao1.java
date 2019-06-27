@@ -3,6 +3,10 @@ import br.furb.furbot.MundoVisual;
 
 public class Questao1 extends Furbot {
 
+	public static void main(String[] args) {
+		MundoVisual.iniciar("Questao1.xml");
+	}
+
 	public void inteligencia() throws Exception {
 		diga("Questao1\nOlá mundo!!!!");
 		/*andarDireita();
@@ -53,8 +57,4 @@ public class Questao1 extends Furbot {
 		andarEsquerda();
 	}
 
-	public static void main(String[] args) {
-		MundoVisual.iniciar("Questao1.xml");
-	}
-	
 }

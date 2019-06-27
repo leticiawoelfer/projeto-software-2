@@ -230,7 +230,7 @@ public class MundoVisual extends JFrame {
 						+ "   empurrar, remover, contar ou acumular o valor do objeto.\n"
 						+ "- Tecla D para escrever algo que deve ser dito.\n"
 						+ "- Tecla P para que o robo informe sua posição.\n\n"
-						+ "Ao finalizar clique no botão Stop. Então você terá a opção de\n"
+						+ "Ao finalizar clique no botão Parar. Então você terá a opção de\n"
 						+ "gerar o codigo baseado nos comandos que você fez o\n"
 						+ "robo executar.";
 

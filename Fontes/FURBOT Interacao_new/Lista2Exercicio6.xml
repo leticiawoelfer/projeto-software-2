@@ -7,7 +7,9 @@
   <br> nas colunas pares e nas colunas ímpares.</br>
 </enunciado> 
 <mundo>
-<random limiteInfY="3" limiteSupY="8" limiteInfX="3" limiteSupX="8" />
+<qtdMaxLinCol>20</qtdMaxLinCol>
+<qtdMinLinCol>4</qtdMinLinCol>
+<tamanhoCel>M</tamanhoCel>
 <explodir>true</explodir>
 </mundo>
 <robo>
